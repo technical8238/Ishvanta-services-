@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './services.html',
   styleUrls: ['./services.css']
 })
-export class ServicesPage {}
+export class ServicesPage {
+  callNow(): void {
+    window.location.href = 'tel:+918849701206';
+  }
+
+  whatsappNow(): void {
+    window.open('https://wa.me/918849701206', '_blank');
+  }
+}

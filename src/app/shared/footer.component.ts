@@ -67,25 +67,36 @@ export class FooterComponent {
     {
       title: 'Company',
       links: [
-        { label: 'About', href: '/about' },
+        { label: 'Home', href: '/' },
+        { label: 'About Us', href: '/about' },
         { label: 'Services', href: '/services' },
-        { label: 'Portfolio', href: '/portfolio' },
-        { label: 'Careers', href: '/careers' }
+        { label: 'Our Work', href: '/our-work' },
+        { label: 'Reviews', href: '/reviews' },
+        { label: 'Service Areas', href: '/service-areas' },
+        { label: 'Contact Us', href: '/contact' }
       ]
     },
     {
-      title: 'Solutions',
+      title: 'Our Services',
       links: [
-        { label: 'Web Development', href: '/services' },
-        { label: 'Mobile Apps', href: '/services' },
-        { label: 'Cloud & AI', href: '/services' }
+        { label: 'Electrical Service', href: '/services' },
+        { label: 'Plumbing Service', href: '/services' },
+        { label: 'House Painting Service', href: '/services' },
+        { label: 'Furniture Service', href: '/services' },
+        { label: 'Kitchen Appliances Service', href: '/services' },
+        { label: 'AC & Fridge Service', href: '/services' },
+        { label: 'Two Wheeler Service', href: '/services' },
+        { label: 'Fabrication Service', href: '/services' },
+        { label: 'CCTV Installation Service', href: '/services' }
       ]
     },
     {
       title: 'Support',
       links: [
-        { label: 'Contact', href: '/contact' },
+        { label: 'Contact Us', href: '/contact' },
         { label: 'FAQ', href: '/faq' },
+        { label: 'Terms & Conditions', href: '/terms' },
+        { label: 'Privacy Policy', href: '/privacy' },
         { label: 'Sitemap', href: '/sitemap' }
       ]
     }

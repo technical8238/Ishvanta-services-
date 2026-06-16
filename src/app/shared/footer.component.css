@@ -7,21 +7,22 @@
 .footer-container {
   position: relative;
   margin-top: 4rem;
-  padding: 3rem 1.25rem 2rem;
+  padding: 3rem 1.5rem 2.5rem;
   overflow: hidden;
-  border-top: 1px solid var(--border);
+  background: radial-gradient(circle at top left, rgba(255, 152, 0, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08), transparent 32%),
+    linear-gradient(180deg, #041B4F 0%, #081E55 45%, #071A4A 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Background Gradient Effect */
+/* Background Glow */
 .footer-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(34, 211, 238, 0.04));
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 152, 0, 0.18), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 26%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   pointer-events: none;
   z-index: 0;
 }
@@ -33,13 +34,13 @@
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: minmax(280px, 1.3fr) repeat(3, minmax(240px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }
 
-/* Footer Section Base Styles */
-.footer-section {
+/* Footer Panel Base Styles */
+.footer-panel {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -49,7 +50,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(22px);
   }
   to {
     opacity: 1;
@@ -57,51 +58,90 @@
   }
 }
 
-/* Company Info Section */
-.company-info {
-  gap: 0.75rem;
+.footer-brand-panel {
+  gap: 1.25rem;
 }
 
-.company-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.company-name {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  background: linear-gradient(135deg, var(--accent), rgba(59, 130, 246, 0.8));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: var(--accent);
-}
-
-.company-tagline {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--muted);
-  font-weight: 500;
-  font-style: italic;
-}
-
-.company-meta {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--muted);
-  display: flex;
+.footer-eyebrow {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 152, 0, 0.12);
+  border-radius: 999px;
+  color: #ffb347;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
-.company-description {
-  margin: 0.5rem 0 0 0;
-  font-size: 0.875rem;
-  color: var(--muted);
-  line-height: 1.6;
+.footer-heading {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+  line-height: 1.05;
+  color: #ffffff;
+  max-width: 520px;
+}
+
+.footer-copy {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 0.9rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.footer-action-primary {
+  background: #ff8a00;
+  color: #081e55;
+}
+
+.footer-action-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(255, 152, 0, 0.2);
+}
+
+.footer-action-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.footer-panel.footer-links-panel {
+  gap: 1.25rem;
+}
+
+.company-meta,
+.company-description,
+.company-header,
+.company-name,
+.company-tagline,
+.company-info {
+  display: none;
 }
 
 /* Links Section */
@@ -114,41 +154,38 @@
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text);
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border);
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(255, 152, 0, 0.45);
 }
 
 .links-list {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .footer-link {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0.35rem 0;
-  border-left: 2px solid transparent;
-  padding-left: 0.75rem;
-  display: flex;
+  transition: transform 0.25s ease, color 0.25s ease;
+  padding: 0.25rem 0;
+  display: inline-flex;
   align-items: center;
 }
 
 .footer-link:hover {
-  color: var(--accent);
+  color: #ffb347;
   transform: translateX(4px);
-  border-left-color: var(--accent);
 }
 
 .footer-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: 2px solid #ffb347;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Newsletter Section */
@@ -416,7 +453,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -424,31 +461,33 @@
   gap: 1rem;
 }
 
-.bottom-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.copyright {
+.footer-copy-small {
   margin: 0;
+  color: rgba(255, 255, 255, 0.64);
   font-size: 0.9rem;
-  color: var(--muted);
 }
 
 .legal-links {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .legal-link {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
   padding: 0.25rem 0;
+}
+
+.legal-link:hover {
+  color: #ffb347;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.32);
 }
 
 .legal-link:hover {

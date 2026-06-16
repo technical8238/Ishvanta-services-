@@ -4,77 +4,52 @@
 
   <!-- Main Content -->
   <div class="footer-content">
-    <!-- Company Info Section -->
-    <div class="footer-section company-info">
-      <div class="company-header">
-        <h3 class="company-name">{{ companyInfo.name }}</h3>
-        <p class="company-tagline">{{ companyInfo.tagline }}</p>
+    <div class="footer-panel footer-brand-panel">
+      <span class="footer-eyebrow">Ishvanta One Call Services</span>
+      <h3 class="footer-heading">Premium maintenance, one trusted contact.</h3>
+      <p class="footer-copy">
+        Expert electrical, plumbing, painting, furniture, kitchen appliance, AC & fridge, CCTV, fabrication, and two-wheeler service across Vadodara and Gujarat.
+      </p>
+      <div class="footer-actions">
+        <a class="footer-action footer-action-primary" href="tel:+918849701206">Call Now</a>
+        <a class="footer-action footer-action-secondary" href="https://wa.me/918849701206" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
-      <p class="company-meta">
-        Founded in {{ companyInfo.founded }} • {{ getYearsSinceFoundation() }}+ years of innovation
-      </p>
-      <p class="company-description">
-        We deliver cutting-edge technology solutions that transform businesses and create lasting impact.
-      </p>
     </div>
 
-    <!-- Quick Links Sections -->
-    <ng-container *ngFor="let section of footerSections">
-      <div class="footer-section links-section">
-        <h4 class="section-title">{{ section.title }}</h4>
-        <nav class="links-list">
-          <a
-            *ngFor="let link of section.links"
-            [href]="link.href"
-            class="footer-link"
-            [attr.aria-label]="link.label"
-          >
-            {{ link.label }}
-          </a>
-        </nav>
-      </div>
-    </ng-container>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="footer-divider"></div>
-
-  <div class="footer-contact">
-    <div class="contact-grid">
-      <a
-        *ngFor="let contact of contactInfo"
-        [href]="contact.href"
-        class="contact-item"
-        [attr.aria-label]="contact.label"
-      >
-        <span class="contact-icon">{{ contact.icon }}</span>
-        <div class="contact-text">
-          <p class="contact-label">{{ contact.label }}</p>
-          <p class="contact-value">{{ contact.value }}</p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Bottom Section -->
-  <div class="footer-bottom">
-    <div class="bottom-content">
-      <p class="copyright">
-        &copy; {{ currentYear }} {{ companyInfo.name }}. All rights reserved.
-      </p>
-
-      <nav class="legal-links">
-        <a href="/privacy" class="legal-link">Privacy</a>
-        <span class="divider">•</span>
-        <a href="/terms" class="legal-link">Terms</a>
-        <span class="divider">•</span>
-        <a href="/sitemap" class="legal-link">Sitemap</a>
+    <div class="footer-panel footer-links-panel">
+      <h4 class="section-title">Company</h4>
+      <nav class="links-list">
+        <a *ngFor="let link of footerSections[0].links" [href]="link.href" class="footer-link">{{ link.label }}</a>
       </nav>
     </div>
 
-    <p class="designed-by">
-      Crafted with ❤️ by Ishavanta One Call Service
-    </p>
+    <div class="footer-panel footer-links-panel">
+      <h4 class="section-title">Our Services</h4>
+      <nav class="links-list">
+        <a *ngFor="let link of footerSections[1].links" [href]="link.href" class="footer-link">{{ link.label }}</a>
+      </nav>
+    </div>
+
+    <div class="footer-panel footer-links-panel">
+      <h4 class="section-title">Support</h4>
+      <nav class="links-list">
+        <a *ngFor="let link of footerSections[2].links" [href]="link.href" class="footer-link">{{ link.label }}</a>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- Bottom Section -->
+  <div class="footer-bottom">
+    <p class="footer-copy-small">&copy; {{ currentYear }} {{ companyInfo.name }}. All rights reserved.</p>
+
+    <nav class="legal-links">
+      <a href="/privacy" class="legal-link">Privacy Policy</a>
+      <span class="divider">•</span>
+      <a href="/terms" class="legal-link">Terms & Conditions</a>
+      <span class="divider">•</span>
+      <a href="/sitemap" class="legal-link">Sitemap</a>
+    </nav>
   </div>
 
   <!-- WhatsApp FAB Link -->

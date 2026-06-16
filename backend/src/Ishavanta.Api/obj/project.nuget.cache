@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hYbzcuWHHtk=",
+  "dgSpecHash": "CI4qsxPQg4g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta one call service\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta services\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
@@ -89,9 +89,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'AutoMapper' 12.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta one call service\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta services\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta one call service\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
+      "filePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta services\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net10.0"

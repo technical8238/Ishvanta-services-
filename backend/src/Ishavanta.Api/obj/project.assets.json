@@ -4868,11 +4868,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta one call service\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta services\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
       "projectName": "Ishavanta.Api",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta one call service\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta services\\Ishavanta services\\backend\\src\\Ishavanta.Api\\Ishavanta.Api.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta one call service\\Ishavanta services\\backend\\src\\Ishavanta.Api\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ishvanta services\\Ishavanta services\\backend\\src\\Ishavanta.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
